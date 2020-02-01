@@ -12,7 +12,7 @@
 
 #define servo_pin 13
 
-Servo myservo       //Declare servo object
+Servo myservo;       //Declare servo object
 int pos = 0;        //Variable to store the servo position
 
 void setup() {
