@@ -16,7 +16,7 @@ Servo myservo       //Declare servo object
 int pos = 0;        //Variable to store the servo position
 
 void setup() {
-  
+  myservo.attach(servo_pin);
 }
 
 void loop() {
