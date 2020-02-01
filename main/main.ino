@@ -15,7 +15,7 @@
 
 Servo myservo;       //Declare servo object
 int pos = 0;         //Variable to store the servo position
-int sensor_value;    //Varible to store value at sensor
+int sensor_value;    //Variable to store value at sensor
 
 void setup() {
   myservo.attach(servo_pin);
