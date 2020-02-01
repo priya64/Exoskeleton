@@ -1,6 +1,19 @@
-void setup() {
-  // put your setup code here, to run once:
+/***********************************************************************
+ * Project: Exoskeleton
+ * Date: January 31st 2020
+ * 
+ * This is the code for the exoskeleton project.
+ * It must rotate in both directions to account for a finger unfolding and folding,
+ * as well as only do so if the user chooses to (reading from sensor).
+ * 
+ * Author: Andrea Martinez Chung
+ *********************************************************************/
+#include <Servo.h>
 
+#define servo_pin 13
+
+void setup() {
+  
 }
 
 void loop() {
