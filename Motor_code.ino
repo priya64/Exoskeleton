@@ -20,6 +20,13 @@ void setup() {
  Serial.begin(9600);
 }
 
+void EMG_loop() { //currently using a potentiometer as a substitute
+  pot_num = analogRead(potpin);
+  calc = (pot_num/1023.0)*10000;
+  Serial.println(calc);
+  delay(1000);
+}
+
 void loop() {
   
   //take in signal from motor
@@ -37,8 +44,5 @@ void loop() {
     
   delay(500);
   
-  pot_num = analogRead(potpin);
-  calc = (pot_num/1023.0)*10000;
-  Serial.println(calc);
-  delay(1000);
+  EMG_loop();
 }
