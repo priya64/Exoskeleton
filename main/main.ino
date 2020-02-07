@@ -10,7 +10,7 @@
  *********************************************************************/
 #include <Servo.h>
 
-#define servo_pin 13
+#define servo_pin 11
 #define sensor_pin A0
 
 Servo myservo;       //Declare servo object
