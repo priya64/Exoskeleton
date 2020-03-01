@@ -19,7 +19,7 @@ int sensor_value;    //Variable to store value at sensor
 
 void setup() {
   myservo.attach(servo_pin);
-  for(pos = 0; pos <= 45; pos++){      //rotate servo from 0 degrees to 90 degrees
+  for(pos = 0; pos <= 90; pos++){      //rotate servo from 0 degrees to 90 degrees
       myservo.write(pos);
       delay(15);
     }
@@ -30,7 +30,7 @@ void loop() {
   Serial.println(sensor_value);
   
   if(sensor_value > 70){                  //move finger if user flexes (add position condition)
-    for(pos = 45; pos <= 90; pos++){      //rotate servo from 0 degrees to 90 degrees
+    for(pos = 90; pos <= 180; pos++){      //rotate servo from 0 degrees to 90 degrees
       myservo.write(pos);
       delay(15);
     }
@@ -39,7 +39,7 @@ void loop() {
       sensor_value = analogRead(sensor_pin);
     }
     
-    for(pos = 90; pos >=45; pos--){       //rotate servo from 90 degrees to 0 degrees
+    for(pos = 180; pos >= 90; pos--){       //rotate servo from 90 degrees to 0 degrees
       myservo.write(pos);
       delay(15);
     }
