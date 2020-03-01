@@ -29,17 +29,17 @@ void loop() {
   sensor_value = analogRead(sensor_pin);
   Serial.println(sensor_value);
   
-  if(sensor_value > 70 && pos == 45){                //move finger if user flexes
+  if(sensor_value > 70){                  //move finger if user flexes (add position condition)
     for(pos = 45; pos <= 90; pos++){      //rotate servo from 0 degrees to 90 degrees
       myservo.write(pos);
       delay(15);
     }
     
-    while(sensor_value > 0){           //while the user is still flexing, don't do anything
+    while(sensor_value > 0){              //while the user is still flexing, don't do anything
       sensor_value = analogRead(sensor_pin);
     }
     
-    for(pos = 90; pos >=45; pos--){      //rotate servo from 90 degrees to 0 degrees
+    for(pos = 90; pos >=45; pos--){       //rotate servo from 90 degrees to 0 degrees
       myservo.write(pos);
       delay(15);
     }
